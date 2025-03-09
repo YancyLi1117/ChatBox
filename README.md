@@ -1,36 +1,88 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# **ChatBox - AI-Powered Chat Application**  
 
-## Getting Started
+## **📌 Project Overview**  
+ChatBox is a **Next.js-based AI chat application** that supports **WebSockets**, **persistent chat history**, and a **dark mode toggle**. The UI is inspired by ChatGPT, featuring a sidebar for chat navigation and a responsive chat window for seamless user interaction.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## **🛠️ Features**
+### **1️⃣ Chat System**
+- Users can create multiple chat sessions, each stored in **localStorage**.
+- Messages are stored persistently and limited to the **last 100** for optimal performance.
+- WebSockets are used for **real-time AI responses** (currently mocked, but ready for OpenAI API integration).
+  
+### **2️⃣ Sidebar Navigation**
+- **Collapsible sidebar** with chat list management.
+- **New chat** button for creating new conversations.
+- **Delete button** (appears on hover) for removing old chats.
+
+
+### **3️⃣ UI & UX**
+- **Dark Mode Toggle** (persists in localStorage).
+- **Smooth hover effects** for sidebar elements.
+- **Chat bubbles** styled dynamically based on the sender.
+- **Auto-scroll to latest message** in chat.
+- **Chat input expands** up to 5 lines like ChatGPT.
+
+### **4️⃣ Persistent Data**
+- Chats and messages are stored in **localStorage**.
+- **Dark mode preference** is saved and applied automatically.
+- WebSockets reset correctly when switching between chats.
+
+
+## **🚀 Getting Started**
+
+### **1️⃣ Clone the Repository**
+```sh
+git clone https://github.com/YancyLi1117/chatbox.git
+cd chatbox
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### **2️⃣ Install Dependencies**
+```sh
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### **3️⃣ Start the Development Server**
+```sh
+npm run dev
+```
+The app will be available at **`http://localhost:3000`** (or a custom domain if configured).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## **🔗 Environment Variables**
+To use OpenAI API (if needed), create a `.env.local` file:
+```
+NEXT_PUBLIC_OPENAI_API_KEY=your-api-key-here
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## **🎨 UI Customizations**
+### **Dark & Light Mode**
+- The UI dynamically updates based on **dark/light mode** selection.
+- **Dark mode preference is stored** in `localStorage`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### **Sidebar Behavior**
+- **Expands and collapses** smoothly.
+- **Chat list shrinks vertically** when collapsed.
+- **Delete button appears only on hover** (stays on the right).
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## **🤖 Future Improvements**
+✅ **Integrate OpenAI API** for real AI-generated responses.  
+✅ **Add user authentication** to sync chats across devices.  
+✅ **Deploy to production** using Vercel.  
+
+---
+
+## **📜 License**
+This project is open-source under the **MIT License**.
+
+---
+
+### **💡 Final Notes**
+If you have any issues or feature requests, feel free to open an issue! 🚀🔥
